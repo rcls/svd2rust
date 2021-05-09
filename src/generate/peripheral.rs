@@ -689,6 +689,7 @@ fn expand_register(
     let mut register_expanded = vec![];
 
     let register_size = register
+        .properties
         .size
         .or(defs.size)
         .ok_or_else(|| anyhow!("Register {} has no `size` field", register.name))?;

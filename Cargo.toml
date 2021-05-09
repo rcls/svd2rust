@@ -44,7 +44,8 @@ anyhow = "1.0"
 thiserror = "1.0"
 
 [dependencies.svd-parser]
-version = "0.10.2"
+git = "https://github.com/rust-embedded/svd"
+branch = "resort"
 features = ["derive-from"]
 
 [dependencies.syn]

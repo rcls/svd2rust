@@ -177,7 +177,7 @@ pub fn replace_suffix(name: &str, suffix: &str) -> String {
 }
 
 pub fn access_of(register: &Register) -> Access {
-    register.access.unwrap_or_else(|| {
+    register.properties.access.unwrap_or_else(|| {
         if let Some(fields) = &register.fields {
             if fields.iter().all(|f| f.access == Some(Access::ReadOnly)) {
                 Access::ReadOnly
